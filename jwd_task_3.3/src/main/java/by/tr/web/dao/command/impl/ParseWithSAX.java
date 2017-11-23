@@ -8,10 +8,10 @@ import java.util.List;
 import java.io.IOException;
 
 import by.tr.web.dao.command.DaoCommand;
-import by.tr.web.dao.command.impl.parsers.SAXHandler;
+import by.tr.web.dao.command.impl.parser.SAXHandler;
 import by.tr.web.dao.command.impl.util.FilePathHelper;
 import by.tr.web.dao.command.impl.util.Messages;
-import by.tr.web.dao.exceptions.DaoException;
+import by.tr.web.dao.exception.DaoException;
 import by.tr.web.entity.CD;
 
 

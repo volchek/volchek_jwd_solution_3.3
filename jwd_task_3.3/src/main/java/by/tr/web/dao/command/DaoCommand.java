@@ -3,7 +3,7 @@ package by.tr.web.dao.command;
 import java.util.List;
 
 import by.tr.web.entity.CD;
-import by.tr.web.dao.exceptions.DaoException;
+import by.tr.web.dao.exception.DaoException;
 
 public interface DaoCommand {
 	

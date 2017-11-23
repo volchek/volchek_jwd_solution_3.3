@@ -8,10 +8,10 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 import by.tr.web.dao.command.DaoCommand;
-import by.tr.web.dao.command.impl.parsers.DOMHelper;
+import by.tr.web.dao.command.impl.parser.DOMHelper;
 import by.tr.web.dao.command.impl.util.FilePathHelper;
 import by.tr.web.dao.command.impl.util.Messages;
-import by.tr.web.dao.exceptions.DaoException;
+import by.tr.web.dao.exception.DaoException;
 import by.tr.web.entity.CD;
 
 

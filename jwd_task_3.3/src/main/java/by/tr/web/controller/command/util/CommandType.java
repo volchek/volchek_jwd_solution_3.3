@@ -1,6 +1,6 @@
 package by.tr.web.controller.command.util;
 
-public enum COMMAND_TYPE {
+public enum CommandType {
 
 	PARSE, SHOW;
 	

@@ -1,4 +1,4 @@
-package by.tr.web.service.exceptions;
+package by.tr.web.service.exception;
 
 
 public class ServiceException extends Exception {

@@ -1,4 +1,4 @@
-package by.tr.web.controller.exceptions;
+package by.tr.web.controller.exception;
 
 
 public class ControllerException extends Exception {

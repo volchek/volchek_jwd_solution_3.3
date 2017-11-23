@@ -1,4 +1,4 @@
-package by.tr.web.dao.exceptions;
+package by.tr.web.dao.exception;
 
 
 public class DaoException extends Exception {

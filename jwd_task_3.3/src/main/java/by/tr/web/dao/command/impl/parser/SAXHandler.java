@@ -1,4 +1,4 @@
-package by.tr.web.dao.command.impl.parsers;
+package by.tr.web.dao.command.impl.parser;
 
 import java.util.List;
 import java.util.LinkedList;
@@ -9,7 +9,7 @@ import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import by.tr.web.entity.CD;
-import by.tr.web.entity.CD_TAGS;
+import by.tr.web.entity.CDTags;
 
 
 public class SAXHandler extends DefaultHandler {
@@ -28,9 +28,9 @@ public class SAXHandler extends DefaultHandler {
 	public void startElement(String uri, String localName, String qName, 
 					Attributes attributes) throws SAXException {
 		content = new StringBuilder();
-		if(localName.equals(CD_TAGS.CD.name())){
+		if(localName.equals(CDTags.CD.name())){
 				currentCD = new CD();
-				int id = Integer.parseInt(attributes.getValue(CD_TAGS.id.name()));
+				int id = Integer.parseInt(attributes.getValue(CDTags.id.name()));
 				currentCD.setId(id);
 		}
 	}
@@ -45,7 +45,7 @@ public class SAXHandler extends DefaultHandler {
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		
-		CD_TAGS tag = CD_TAGS.valueOf(localName);
+		CDTags tag = CDTags.valueOf(localName);
 		
 		switch(tag){
 		case TITLE:

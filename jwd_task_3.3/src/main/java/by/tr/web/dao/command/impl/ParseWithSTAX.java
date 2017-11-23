@@ -9,10 +9,10 @@ import javax.xml.stream.XMLStreamReader;
 import javax.xml.stream.XMLStreamException;
 
 import by.tr.web.dao.command.DaoCommand;
-import by.tr.web.dao.command.impl.parsers.STAXHelper;
+import by.tr.web.dao.command.impl.parser.STAXHelper;
 import by.tr.web.dao.command.impl.util.FilePathHelper;
 import by.tr.web.dao.command.impl.util.Messages;
-import by.tr.web.dao.exceptions.DaoException;
+import by.tr.web.dao.exception.DaoException;
 import by.tr.web.entity.CD;
 
 

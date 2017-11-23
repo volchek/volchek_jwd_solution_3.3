@@ -1,4 +1,4 @@
-package by.tr.web.service.Factory;
+package by.tr.web.service.factory;
 
 import by.tr.web.service.XmlService;
 import by.tr.web.service.impl.XmlServiceImpl;

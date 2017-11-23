@@ -1,4 +1,4 @@
-package by.tr.web.dao.command.impl.parsers;
+package by.tr.web.dao.command.impl.parser;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -8,7 +8,7 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
 import by.tr.web.entity.CD;
-import by.tr.web.entity.CD_TAGS;
+import by.tr.web.entity.CDTags;
 
 
 public class STAXHelper {
@@ -28,7 +28,7 @@ public class STAXHelper {
 			case XMLStreamConstants.START_ELEMENT:
 				elementName = reader.getLocalName();
 				
-				if (elementName.equals(CD_TAGS.CD.name())){
+				if (elementName.equals(CDTags.CD.name())){
 					currentCD = new CD();
 					processStartElement(reader, currentCD);
 				}
@@ -50,7 +50,7 @@ public class STAXHelper {
 	
 	
 	private static void processStartElement(XMLStreamReader reader, CD currentCD){
-		int id = Integer.parseInt(reader.getAttributeValue(null, CD_TAGS.id.name()));
+		int id = Integer.parseInt(reader.getAttributeValue(null, CDTags.id.name()));
 		currentCD.setId(id);
 	}
 
@@ -61,7 +61,7 @@ public class STAXHelper {
 			return;
 		}
 		
-		CD_TAGS tag = CD_TAGS.valueOf(tagName);
+		CDTags tag = CDTags.valueOf(tagName);
 		switch(tag){
 		case TITLE:
 			currentCD.setTitle(text);
@@ -89,7 +89,7 @@ public class STAXHelper {
 
 	private static void processEndElement(XMLStreamReader reader, CD currentCD, List<CD> list){
 		String tagName = reader.getLocalName();
-		if (tagName.equals(CD_TAGS.CD.name())){
+		if (tagName.equals(CDTags.CD.name())){
 			list.add(currentCD);
 			currentCD = null;
 		}

@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import by.tr.web.controller.command.ControllerCommand;
 import by.tr.web.controller.command.util.CommandConsts;
-import by.tr.web.controller.exceptions.ControllerException;
+import by.tr.web.controller.exception.ControllerException;
 import by.tr.web.entity.CD;
 import by.tr.web.service.XmlService;
-import by.tr.web.service.Factory.ServiceFactory;
-import by.tr.web.service.exceptions.ServiceException;
+import by.tr.web.service.factory.ServiceFactory;
+import by.tr.web.service.exception.ServiceException;
 
 
 public class Parse implements ControllerCommand {

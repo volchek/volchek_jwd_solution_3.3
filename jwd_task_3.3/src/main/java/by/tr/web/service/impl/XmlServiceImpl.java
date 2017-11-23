@@ -5,9 +5,9 @@ import java.util.List;
 import by.tr.web.entity.CD;
 import by.tr.web.dao.command.DaoCommand;
 import by.tr.web.dao.command.DaoCommandFactory;
-import by.tr.web.dao.exceptions.DaoException;
+import by.tr.web.dao.exception.DaoException;
 import by.tr.web.service.XmlService;
-import by.tr.web.service.exceptions.ServiceException;
+import by.tr.web.service.exception.ServiceException;
 
 
 public class XmlServiceImpl implements XmlService {

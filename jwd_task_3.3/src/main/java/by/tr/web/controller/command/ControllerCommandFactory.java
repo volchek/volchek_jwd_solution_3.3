@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 import by.tr.web.controller.command.impl.Parse;
 import by.tr.web.controller.command.impl.Show;
-import by.tr.web.controller.command.util.COMMAND_TYPE;
+import by.tr.web.controller.command.util.CommandType;
 
 
 public class ControllerCommandFactory {
@@ -16,8 +16,8 @@ public class ControllerCommandFactory {
     
     private final Map<String, ControllerCommand> commands = new HashMap<>();
     {
-        commands.put(COMMAND_TYPE.PARSE.name(), new Parse());
-        commands.put(COMMAND_TYPE.SHOW.name(), new Show());
+        commands.put(CommandType.PARSE.name(), new Parse());
+        commands.put(CommandType.SHOW.name(), new Show());
     }
     
     
