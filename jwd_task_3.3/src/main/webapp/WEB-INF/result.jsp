@@ -12,38 +12,41 @@
     <title>RESULT</title>
   </head>
   <body>
-  
-	<table border="1" id="cntr">
-		<tr>
- 			<td>#</td>
-			<td>Title</td>
-			<td>Artist</td>
-			<td>Country</td>
- 			<td>Company</td>
-			<td>Year</td>
-			<td>Price</td>
-		</tr>
+	<div>
+		<table border="1" style="margin-left: auto; margin-right: auto">
+			<tr>
+	 			<td>#</td>
+				<td>Title</td>
+				<td>Artist</td>
+				<td>Country</td>
+	 			<td>Company</td>
+				<td>Year</td>
+				<td>Price</td>
+			</tr>
+			
+			<c:forEach items="${requestScope.cd}" var="cd" >
+				<tr>
+	 			<td><c:out value="${cd.id}"></c:out></td>
+				<td><c:out value="${cd.title}"></c:out></td>
+				<td><c:out value="${cd.artist}"></c:out></td>
+				<td><c:out value="${cd.country}"></c:out></td>
+				<td><c:out value="${cd.company}"></c:out></td>
+				<td><c:out value="${cd.year}"></c:out></td>
+				<td><c:out value="${cd.price}"></c:out></td>
+			</tr>
+			</c:forEach>
+		</table>
 		
-		<c:forEach items="${requestScope.cd}" var="cd" >
-   		<tr>
- 			<td><c:out value="${cd.id}"></c:out></td>
-			<td><c:out value="${cd.title}"></c:out></td>
-			<td><c:out value="${cd.artist}"></c:out></td>
-			<td><c:out value="${cd.country}"></c:out></td>
-			<td><c:out value="${cd.company}"></c:out></td>
-			<td><c:out value="${cd.year}"></c:out></td>
-			<td><c:out value="${cd.price}"></c:out></td>
-		</tr>
+		<!-- Show a list of pages -->
+		<p style="text-align: center">
+		<c:set var="pageCount" value="${pageCount}"/>
+		<c:forEach begin="1" end="${pageCount + 1}" var="i">
+			<a href="Controller?page=${i}&command=SHOW">${i}</a>
 		</c:forEach>
-	</table>
-	
-	<!-- Show a list of pages -->
-	<c:set var="pageCount" value="${pageCount}"/>
-	<c:forEach begin="1" end="${pageCount + 1}" var="i">
-		<a href="Controller?page=${i}&command=SHOW">${i}</a>
-	</c:forEach>
-    
-    <br><br>	
+		</p>
+	</div>
+
+    <br><br>
     <a href="index.jsp">Choose another parser</a>
   
   </body>

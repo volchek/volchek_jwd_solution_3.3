@@ -18,26 +18,26 @@ import by.tr.web.entity.CD;
 public class ParseWithSAX implements DaoCommand {
 
 	private FilePathHelper fileHelper = new FilePathHelper();	
-	private SAXHandler handler = new SAXHandler();
 	
 	@Override
-	public List<CD> getCD(String filename) throws DaoException  {
+	public List<CD> getCD(String filename) throws DaoException {
+		
 		try {
 			
 			XMLReader reader = XMLReaderFactory.createXMLReader();
-				
+			
+			SAXHandler handler = new SAXHandler();
 			reader.setContentHandler(handler);
 			reader.setErrorHandler(handler);
 			
 			String filePath = fileHelper.getFilePath(filename);
-		    reader.parse(new InputSource(filePath));
+			reader.parse(new InputSource(filePath));
 			
-	        List<CD> listCD = handler.getCDList();
-	        
-	        return listCD;
-		
+			List<CD> listCD = handler.getCDList();
+			
+			return listCD;
 		}
-		catch (SAXException  ex) {
+		catch (SAXException ex) {
 			throw new DaoException(Messages.PARSER_ERROR_MSG, ex);
 		}
 		catch(IOException ex){

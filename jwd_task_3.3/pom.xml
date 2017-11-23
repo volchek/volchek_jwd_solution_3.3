@@ -22,6 +22,11 @@
       <artifactId>javax.servlet-api</artifactId>
       <version>4.0.0</version>
     </dependency>
+    <dependency>
+    <groupId>xerces</groupId>
+    <artifactId>xercesImpl</artifactId>
+    <version>2.11.0</version>
+</dependency>
   </dependencies>
   <build>
     <finalName>task3-3</finalName>
@@ -33,10 +38,20 @@
       <configuration>
         <port>8080</port>
         <path>/</path>
-        <source>1.8</source>
-        <target>1.8</target>
+        <source>1.7</source>
+        <target>1.7</target>
       </configuration>
     </plugin>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <forceJavacCompilerUse>true</forceJavacCompilerUse>
+        </configuration>
+      </plugin>
   </plugins>
   </build>
 </project>

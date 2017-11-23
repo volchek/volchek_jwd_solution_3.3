@@ -37,8 +37,8 @@ public class SAXHandler extends DefaultHandler {
 	 
 	
 	@Override
-	public void characters(char[] buffer, int start, int lenght){
-		content.append(buffer, start, lenght);
+	public void characters(char[] buffer, int start, int length){
+		content.append(buffer, start, length);
 	}
 
 	
