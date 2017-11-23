@@ -1,0 +1,25 @@
+body {
+    background-color: lightblue;
+}
+
+
+table#cntr {
+	width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+  }
+
+.center {
+	margin-top: 50px;
+	text-align: center;	
+}
+
+#submit {
+  color: #ffffff;
+  width: 135px;
+  height: 50px;
+  border: solid 2px;
+  margin: auto;
+  padding: 30;
+  background: #5555ff; 
+}
