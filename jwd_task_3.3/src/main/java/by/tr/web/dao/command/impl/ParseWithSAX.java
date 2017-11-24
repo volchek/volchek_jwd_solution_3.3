@@ -23,7 +23,6 @@ public class ParseWithSAX implements DaoCommand {
 	public List<CD> getCD(String filename) throws DaoException {
 		
 		try {
-			
 			XMLReader reader = XMLReaderFactory.createXMLReader();
 			
 			SAXHandler handler = new SAXHandler();

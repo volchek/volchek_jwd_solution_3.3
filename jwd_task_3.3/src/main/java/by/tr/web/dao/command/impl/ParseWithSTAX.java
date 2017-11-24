@@ -28,7 +28,6 @@ public class ParseWithSTAX implements DaoCommand {
 		List<CD> listCD = null;
 		
 		try {
-			
 			InputStream fileStream = fileHelper.getFileStream(filename);
 			
 			XMLStreamReader reader = staxFactory.createXMLStreamReader(fileStream);

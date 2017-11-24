@@ -29,9 +29,9 @@ public class SAXHandler extends DefaultHandler {
 					Attributes attributes) throws SAXException {
 		content = new StringBuilder();
 		if(localName.equals(CDTags.CD.name())){
-				currentCD = new CD();
-				int id = Integer.parseInt(attributes.getValue(CDTags.id.name()));
-				currentCD.setId(id);
+			currentCD = new CD();
+			int id = Integer.parseInt(attributes.getValue(CDTags.id.name()));
+			currentCD.setId(id);
 		}
 	}
 	 

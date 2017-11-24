@@ -31,9 +31,9 @@ public class ParseWithDOM implements DaoCommand {
 			parser.parse(filePath);
 			
 			Document doc = parser.getDocument();
-	        List<CD> listCD = DOMHelper.extractInfo(doc);
-	        
-	        return listCD;
+			List<CD> listCD = DOMHelper.extractInfo(doc);
+			
+			return listCD;
 		}
 		catch (SAXException ex){
 			throw new DaoException(Messages.PARSER_ERROR_MSG, ex);
